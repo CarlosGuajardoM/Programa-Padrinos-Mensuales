@@ -1,5 +1,6 @@
 import React from 'react';
 import { Building2, ArrowRight, HeartHandshake, Shield, Sparkles } from 'lucide-react';
+import heroImageSrc from '../assets/images/alianza_social_1789704981647.jpg';
 
 interface HeroProps {
   onOpenRegister: () => void;
@@ -82,10 +83,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister, onExploreProgram }) 
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-sky-950/10 border border-slate-200/90 bg-white p-2 sm:p-3">
                 <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-100">
                   <img
-                    src="/src/assets/images/alianza_social_1789704981647.jpg"
+                    src={heroImageSrc || '/alianza_social.jpg'}
                     alt="Alianza entre empresas y la organización FYEPUM"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.endsWith('/alianza_social.jpg')) {
+                        target.src = '/alianza_social.jpg';
+                      }
+                    }}
                   />
                   {/* Subtle gradient vignette overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />

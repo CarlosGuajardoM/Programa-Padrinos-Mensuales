@@ -1,0 +1,6 @@
+{
+  "name": "Programa de Empresas Padrino FYEPUM",
+  "description": "Plataforma del Programa de Empresas Padrino de Fuerza y Esperanza por Uno Más (FYEPUM) para sumar alianzas empresariales con impacto social.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
